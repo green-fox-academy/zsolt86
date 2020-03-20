@@ -13,8 +13,12 @@ public class Main {
     System.out.println("Sharpie color: " + sharpie1.color +"\nSharpie width: " + sharpie1.width + "\nSharpie ink amount: " + sharpie1.inkAmount);
     sharpie1.use();
     sharpie1.use();
-    System.out.println("Sharpie color: " + sharpie1.color +"\nSharpie width: " + sharpie1.width + "\nSharpie ink amount: " + sharpie1.inkAmount);
-
+    System.out.println("Sharpie ink amount, after using "+ sharpie1.count +" time(s): " + sharpie1.inkAmount);
+    sharpie1.use();
+    sharpie1.use();
+    sharpie1.use();
+    sharpie1.use();
+    System.out.println("Sharpie ink amount, after using "+ sharpie1.count +" time(s): " + sharpie1.inkAmount);
 
   }
 }

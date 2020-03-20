@@ -11,6 +11,7 @@ public class Sharpie {
 
   String color;
   Float width, inkAmount;
+  int count;
 
   public Sharpie(String color, Float width) {
     this.inkAmount = 100f;
@@ -20,6 +21,7 @@ public class Sharpie {
 
   public float use() {
     this.inkAmount--;
+    this.count ++;
     return inkAmount;
   }
 }
