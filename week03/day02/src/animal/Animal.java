@@ -18,11 +18,11 @@ public class Animal {
   }
 
   public void eat() {
-    this.hunger -= 1;
+    this.hunger--;
   }
 
   public void drink() {
-    this.thirst -= 1;
+    this.thirst--;
   }
 
   public void play() {
