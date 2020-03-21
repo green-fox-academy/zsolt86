@@ -16,14 +16,14 @@ public class Main {
 
 
     if (sum == currentSum) {
-      System.out.println(diceSet.getCurrent()+"\n You could throw 6 at the first attempt with six dice!");
+      System.out.println(diceSet.getCurrent()+"\n⚅ ⚅ ⚅ All of the dice are Sixes, for the 1st!⚅ ⚅ ⚅");
     } else {
       do {
         diceSet.reroll();
         currentSum = diceSet.getCurrent().stream().mapToInt(Integer::intValue).sum();
         counter++;
       } while (sum != currentSum);
-      System.out.println(diceSet.getCurrent() + "\nYou could throw 6 with six dice, from " + counter + " attempts.");
+      System.out.println(diceSet.getCurrent() + "\nAll of the dice are Sixes, from " + counter + " rolls.");
     }
   }
 }
