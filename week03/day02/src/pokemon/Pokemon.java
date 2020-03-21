@@ -11,7 +11,7 @@ public class Pokemon {
     this.effectiveAgainst = effectiveAgainst;
   }
 
-  boolean isEffectiveAgainst(Pokemon anotherPokemon) {
+    public boolean isEffectiveAgainst(Pokemon anotherPokemon) {
     return this.effectiveAgainst.equals(anotherPokemon.type);
   }
 }
