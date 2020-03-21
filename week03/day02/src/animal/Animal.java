@@ -5,6 +5,7 @@ Every animal has a hunger value, which is a whole number
         Every animal can eat() which decreases their hunger by one
         Every animal can drink() which decreases their thirst by one
         Every animal can play() which increases both by one*/
+
 package animal;
 
 public class Animal {
