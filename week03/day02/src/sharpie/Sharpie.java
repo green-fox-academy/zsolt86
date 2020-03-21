@@ -21,7 +21,7 @@ public class Sharpie {
 
   public float use() {
     this.inkAmount--;
-    this.count ++;
+    this.count++;
     return inkAmount;
   }
 }
