@@ -16,14 +16,14 @@ package petrolstation;
 
 public class Station {
 
-  int stationAmount;
+  int gasAmount;
 
   public Station() {
-    this.stationAmount = 1000;
+    this.gasAmount = 1000;
   }
 
   public void refill(Car car) {
     car.gasAmount += car.capacity;
-    this.stationAmount -= car.capacity;
+    this.gasAmount -= car.capacity;
   }
 }

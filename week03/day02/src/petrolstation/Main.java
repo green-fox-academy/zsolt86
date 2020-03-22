@@ -25,7 +25,7 @@ public class Main {
     shell.refill(ford);
 
     System.out.println("Car capacity: " + ford.capacity + "\nCar gas amount, after refill: " + ford.gasAmount);
-    System.out.println("Petrol station gas amount, after refill: " + shell.stationAmount);
+    System.out.println("Petrol station gas amount, after refill: " + shell.gasAmount);
 
 
   }
