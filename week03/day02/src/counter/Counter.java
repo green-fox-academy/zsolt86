@@ -8,12 +8,20 @@ also we can reset() the value to the initial value*/
 
 package counter;
 
+import java.util.stream.Collector;
+
 public class Counter {
   Integer counterValue;
+  int storedValue;
 
   public Counter(Integer counterValue) {
     this.counterValue = counterValue;
+    this.storedValue = counterValue;
     System.out.println("counter " + this.counterValue);
+  }
+
+  public Counter() {
+    this.counterValue = 0;
   }
 
   public Integer add() {
@@ -27,7 +35,7 @@ public class Counter {
   }
 
   public void reset() {
-    this.counterValue = 0;
+    this.counterValue = storedValue;
     System.out.println("reset " + this.counterValue);
   }
 }
