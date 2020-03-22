@@ -3,16 +3,16 @@
      Check the current rolled numbers with getCurrent()
      You can reroll with reroll()
      Your task is to roll the dice until all of the dice are 6 */
-
+// currentSum solution source: https://www.baeldung.com/java-stream-sum#using-intstreamsum
 package diceset;
 
 public class Main {
   public static void main(String[] args) {
 
     DiceSet diceSet = new DiceSet();
-    Integer currentSum = diceSet.roll().stream().mapToInt(Integer::intValue).sum();
+    int currentSum = diceSet.roll().stream().mapToInt(Integer::intValue).sum();
     int counter = 1;
-    Integer sum = 36;
+    int sum = 36;
 
 
     if (sum == currentSum) {
