@@ -16,7 +16,7 @@ public class Main {
 
 
     if (sum == currentSum) {
-      System.out.println(diceSet.getCurrent()+"\n⚅ ⚅ ⚅ All of the dice are Sixes, for the 1st!⚅ ⚅ ⚅");
+      System.out.println(diceSet.getCurrent()+"\n⚅ ⚅ ⚅ All of the dice are Sixes, for the 1st roll!⚅ ⚅ ⚅");
     } else {
       do {
         diceSet.reroll();
