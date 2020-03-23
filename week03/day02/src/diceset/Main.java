@@ -18,11 +18,11 @@ public class Main {
     if (sum == currentSum) {
       System.out.println(diceSet.getCurrent()+"\n⚅ ⚅ ⚅ All of the dice are Sixes, for the 1st roll!⚅ ⚅ ⚅");
     } else {
-      do {
+      while (sum != currentSum) {
         diceSet.reroll();
         currentSum = diceSet.getCurrent().stream().mapToInt(Integer::intValue).sum();
         counter++;
-      } while (sum != currentSum);
+      }
       System.out.println(diceSet.getCurrent() + "\nAll of the dice are Sixes, from " + counter + " rolls.");
     }
   }
