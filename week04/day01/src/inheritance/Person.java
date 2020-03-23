@@ -15,9 +15,9 @@ Person(): sets name to Jane Doe, age to 30, gender to female*/
 package inheritance;
 
 public class Person {
-  String name;
-  int age;
-  String gender; //Later I will try replace String with enum, but now it's not clear for me
+  protected String name;
+  protected int age;
+  protected String gender; //Later I will try replace String with enum, but now it's not clear for me
 
   public Person(String name, int age, String gender) {
     this.name = name;
@@ -25,7 +25,7 @@ public class Person {
     this.gender = gender;
   }
 
-  public Person() {
+  protected Person() {
     this.name = "Jane Doe";
     this.age = 30;
     this.gender = "Female";

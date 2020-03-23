@@ -10,14 +10,24 @@ public class Main {
 //    person1.introduce();
 //    person1.getGoal();
 
-    Student denis = new Student("Kevin",15,"Male","McDonald's");
-    Student student1 = new Student();
+//    Student denis = new Student("Kevin",15,"Male","McDonald's");
+//    Student student1 = new Student();
+//
+//    denis.skipDays(5);
+//    denis.introduce();
+//    denis.getGoal();
+//
+//    student1.introduce();
+//    student1.getGoal();
 
-    denis.skipDays(5);
-    denis.introduce();
-    denis.getGoal();
+    Sponsor nynfus = new Sponsor("Nynfas",48,"Male","Nynfus Corporation");
+    Sponsor sponsor1 = new Sponsor();
 
-    student1.introduce();
-    student1.getGoal();
+    nynfus.hire();
+    nynfus.introduce();
+    nynfus.getGoal();
+
+    sponsor1.introduce();
+    sponsor1.getGoal();
   }
 }
