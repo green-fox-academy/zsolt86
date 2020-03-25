@@ -14,17 +14,17 @@ Student(): sets name to Jane Doe, age to 30, gender to female, previousOrganizat
 
 package inheritance;
 
-public class Student extends Person {
+public class Student extends Person implements Cloneable {
   String previousOrganization;
   int skippedDays;
 
-  public Student(String name, int age, String gender, String previousOrganization) {
+  protected Student(String name, int age, String gender, String previousOrganization) {
     super(name, age, gender);
     this.previousOrganization = previousOrganization;
     this.skippedDays = 0;
   }
 
-  public Student() {
+  protected Student() {
     name = "Jane Doe";
     age = 30;
     gender = "Female";
@@ -32,18 +32,23 @@ public class Student extends Person {
     skippedDays = 0;
   }
 
-  public void getGoal() {
+  protected void getGoal() {
     System.out.println("My goal is: Be a junior software developer.");
   }
 
-  public void introduce() {
+  protected void introduce() {
     super.introduce();
     System.out.println(" from " + previousOrganization + " who skipped " + skippedDays + " days from the course already.");
   }
 
-  public int skipDays(int numberOfDays) {
+  protected int skipDays(int numberOfDays) {
     this.skippedDays += numberOfDays;
     return skippedDays;
+  }
+
+  @Override
+  protected Object clone() throws CloneNotSupportedException {
+    return (Student) super.clone();
   }
 
 

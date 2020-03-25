@@ -19,7 +19,7 @@ public class Person {
   protected int age;
   protected String gender; //Later I will try replace String with enum, but now it's not clear for me
 
-  public Person(String name, int age, String gender) {
+  protected Person(String name, int age, String gender) {
     this.name = name;
     this.age = age;
     this.gender = gender;
@@ -31,11 +31,11 @@ public class Person {
     this.gender = "Female";
   }
 
-  public void introduce() {
+  protected void introduce() {
     System.out.print("Hi, I'm " + this.name + ", a " + this.age + " year old " + this.gender);
   }
 
-  public void getGoal() {
+  protected void getGoal() {
     System.out.println("My goal is: Live for the moment!");
   }
 }
