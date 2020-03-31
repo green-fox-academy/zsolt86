@@ -6,7 +6,6 @@ public class F16 extends Aircraft {
     super();
     ammoCapacity = 8;
     baseDamage = 30;
-    type = "F–16 Fighting Falcon";
-    isPriority = false;
+    setPriority(false);
   }
 }
