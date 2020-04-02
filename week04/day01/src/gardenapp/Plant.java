@@ -3,23 +3,20 @@ package gardenapp;
 public class Plant {
   protected String color;
   protected String name;
-  protected int currentWaterAmount;
-  protected int neededWaterAmount;
+  protected double currentWaterAmount;
+  protected double waterThreshold;
   protected double waterAbsorb;
-  protected Boolean isWaterNeeded;
+
 
   public Plant() {
-    this.currentWaterAmount = 0;
+    currentWaterAmount = 0;
   }
 
-  public String getName() {
-    name = getClass().getSimpleName();
-    return name;
+  public boolean isThirsty() {
+    return currentWaterAmount < waterThreshold;
   }
 
-  public Boolean getIsWaterNeeded() {
-    return isWaterNeeded;
+  public void addWater(double waterAmount) {
+    this.currentWaterAmount = (waterAmount * waterAbsorb) + currentWaterAmount;
   }
-
-
 }

@@ -5,11 +5,9 @@ public class Flower extends Plant {
   public Flower(String color) {
     super();
     this.color = color;
-    waterAbsorb = 0.75;
-    neededWaterAmount = 5;
-  }
-
-  public Boolean getIsWaterNeeded() {
-    return currentWaterAmount < neededWaterAmount;
+    this.waterAbsorb = 0.75;
+    this.waterThreshold = 5;
+    this.name = getClass().getSimpleName();
   }
 }
+

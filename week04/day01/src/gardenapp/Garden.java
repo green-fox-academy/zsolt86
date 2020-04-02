@@ -2,35 +2,34 @@ package gardenapp;
 
 import java.util.ArrayList;
 
-public class Garden extends Plant {
-  ArrayList<Plant> garden;
+public class Garden {
 
-  public Garden() {
-    this.garden = new ArrayList<Plant>();
-  }
+    ArrayList<Plant> plants;
 
-  public void add(Plant plant) {
-    garden.add(plant);
-  }
-
-  public String getStatus() {
-    String gardenStatus = "";
-
-    for (Plant plant : garden) {
-      if (plant.getIsWaterNeeded()) {
-        gardenStatus += "The " + plant.color + " " + plant.getName() + " needs water\n";
-      } else {
-        gardenStatus += "The " + plant.color + " " + plant.getName() + " doesn't need water\n";
-      }
+    public Garden() {
+        plants = new ArrayList<>();
     }
-    return gardenStatus;
-  }
 
-  public int Watering(int wateringWaterAmount) {
-    System.out.println("Watering with: " + wateringWaterAmount);
-    for (Plant plant : garden) {
-      plant.currentWaterAmount += (wateringWaterAmount / garden.size() + currentWaterAmount);
+    void add(Plant plant) {
+        plants.add(plant);
     }
-    return currentWaterAmount;
-  }
+
+    void watering(double withWaterAmount) {
+        System.out.println("\nWatering with: " + (int) withWaterAmount);
+        ArrayList<Plant> plantsNeedWater = new ArrayList<>();
+        for (Plant p : plants) {
+            if (p.isThirsty()) {
+                plantsNeedWater.add(p);
+            }
+        }
+        for (Plant pToWater : plantsNeedWater) {
+            pToWater.addWater(withWaterAmount / plantsNeedWater.size());
+        }
+    }
+
+    void gardenStatus() {
+        for (Plant p : plants) {
+            System.out.println("The " + p.color + " " + p.name + ((p.isThirsty()) ? " needs water" : " doesn't need water"));
+        }
+    }
 }
